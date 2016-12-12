@@ -1,5 +1,27 @@
-canvas {
-	display: block;
+#chess_plane {
+	width: 450px;
+	height: auto;
 	margin: 50px auto;
+	padding: 15px;
+	background-color: #e0bf94;
+    border-radius: 20px;
 	box-shadow: -2px -2px 2px #EFEFEF, 5px 5px 5px #B9B9B9;
+}
+#chess_div {
+	width: 450px;
+	height: auto;
+	text-align: center;
+	background-color: #bb8039;
+	padding-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px #666,-2px -2px 2px #999;
+}
+#chess_div #chess_title {
+	line-height: 48px;
+    height: 37px;
+    display: block;
+    font-family: '¿¬Ìå';
+    font-size: 24px;
+    font-weight: bold;
+    color: #65330f;
 }

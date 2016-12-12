@@ -69,7 +69,9 @@ for (var i = 0; i < count; i++) {
 
 var chess = document.getElementById('chess');
 var context = chess.getContext('2d');
-context.strokeStyle = "#BFBFBF";
+//context.fillColor = "#BB8039";
+//context.fillRect(0,0,450,450);
+context.strokeStyle = "#8F5D25";
 //背景图
 var logo = new Image();
 logo.src = "images/logo.png";
