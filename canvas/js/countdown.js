@@ -147,7 +147,7 @@ var update = function(){
 // );
 //
 
-//requestAnimationFrame´úÌæsetInterval 
+//requestAnimationFrameä»£æ›¿setInterval 
 var animate = function(){
 	render(context);
 	update();
