@@ -138,10 +138,19 @@ var update = function(){
 	updateBalls();
 };
 
-setInterval(
-	function(){
-		render(context);
-		update();
-	},
-	20
-);
+// setInterval(
+// 	function(){
+// 		render(context);
+// 		update();
+// 	},
+// 	20
+// );
+//
+
+//requestAnimationFrame´úÌæsetInterval 
+var animate = function(){
+	render(context);
+	update();
+	requestAnimationFrame(animate);
+};
+requestAnimationFrame(animate);
