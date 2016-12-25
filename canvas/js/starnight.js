@@ -49,7 +49,7 @@ var drawMoon = function(cxt, x, y, r, angle, /*optional*/fillColor){
 	cxt.scale(r,r);
 	cxt.rotate(angle*Math.PI/180);
 	moonPath(cxt, 2);
-	cxt.fillStyle = fillColor || "#fb5";
+	cxt.fillStyle = fillColor || "#fC3";
 	cxt.fill();
 	cxt.restore();
 };
@@ -81,8 +81,14 @@ var drawStarNight = function(cxt){
 		var R = Math.random()*5+5;
 		drawPath(cxt, Math.random()*(cxt.canvas.width-2*R)+R,Math.random()*(cxt.canvas.height-250-2*R)+R,R,Math.random()*360);
 	}
-	drawMoon(cxt,600,200,60,36);
+	drawMoon(cxt,600,150,55,36);
 	drawLand(cxt);
+	cxt.font = "bold 50px 宋体";
+	cxt.lineWidth = "2";
+	cxt.strokeStyle = "grey";
+	cxt.textAlign = "right";
+	cxt.textBaseline = "bottom";
+	cxt.strokeText("——Wkit作品",780,580);
 };
 
 drawStarNight(context);
