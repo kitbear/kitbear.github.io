@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Captain America</title>
+    <style type="text/css">
+    #canvas {
+        display: block;
+        margin: 50px auto;
+    }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+    window.onload = function() {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+
+        var context = canvas.getContext("2d");
+        // 四个圆
+        drawArc(context, 300, 300, 120, 0, Math.PI * 2, false, "#dd5870");
+        drawArc(context, 300, 300, 100, 0, Math.PI * 2, false, "#e0dedf");
+        drawArc(context, 300, 300, 80, 0, Math.PI * 2, false, "#dd5870");
+        drawArc(context, 300, 300, 60, 0, Math.PI * 2, false, "#2773d3");
+        drawStar(context, 22, 60, 300, 300, 0, "#dedce1"); // 五角星  
+    }
+
+    function drawStar(ctx, r, R, x, y, changeDeg, fillColor) {
+        //绘制星星的路径,changeDeg：表示五角星旋转的角度
+        ctx.beginPath(); //开始路径  
+        for (var i = 0; i < 5; i++) {
+            ctx.lineTo(Math.cos((18 + i * 72 - changeDeg) / 180 * Math.PI) * R + x, -Math.sin((18 + i * 72 - changeDeg) / 180 * Math.PI) * R + y);
+            ctx.lineTo(Math.cos((54 + i * 72 - changeDeg) / 180 * Math.PI) * r + x, -Math.sin((54 + i * 72 - changeDeg) / 180 * Math.PI) * r + y);
+        }
+        ctx.closePath() //结束路径  
+        ctx.fillStyle = fillColor;
+        ctx.fill();
+    }
+
+    function drawArc(ctx, x, y, r, stratAngel, endAngel, flag, fillColor) {
+        ctx.beginPath();
+        ctx.arc(x, y, r, stratAngel, endAngel, flag);
+        ctx.fillStyle = fillColor;
+        ctx.fill();
+        ctx.closePath();
+    }
+    </script>
+</body>
+</html>
