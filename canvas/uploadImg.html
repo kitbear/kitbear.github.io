@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上传图片</title>
+	<script type="text/javascript" src="js/uploadImg.js"></script>
+	<style type="text/css">
+		#resultCan{margin-top: 5px;}
+		#promptDiv{    
+		    width: 900px;
+		    height: 400px;
+		    background-color: #ccc;
+		    margin-top: 5px;
+		    border: 1px solid #aaa;
+		    text-align: center;
+		    font-size: 26px;
+		    line-height: 400px;
+		    color: #444;
+		}
+		#previewDiv{
+			border:1px solid #ccc; display:none;
+		    width: 900px;
+		    min-height: 400px;
+		}
+		#previewDiv div{
+			float:left;
+			text-align: center;
+			padding: 5px;
+		}
+		#previewDiv div canvas{
+			display: block;
+		}
+		#previewDiv div label{
+			cursor: pointer;
+		    line-height: 25px;
+		}
+		#previewDiv div input{
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+			<input type="file" accept="image/*" name="pics" id="pics" multiple />
+			<input type="button" id="convertBtn" value="生成gif">
+			<input type="button" id="downloadBtn" value="下载gif">
+		</div>
+		<div>
+			<div id="promptDiv">图片区</div>
+			<div id="previewDiv"></div>
+		</div>
+		<div>
+			<table>
+				<tr>
+					<td>
+						<label for="animateSecond">时间间隔(ms)</label>
+						<input type="text" id="animateSecond" value="120">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<canvas id="resultCan"></canvas>
+		</div>
+	</div>
+</body>
+</html>

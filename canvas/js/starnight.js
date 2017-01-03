@@ -83,9 +83,16 @@ var drawStarNight = function(cxt){
 	}
 	drawMoon(cxt,600,150,55,36);
 	drawLand(cxt);
-	cxt.font = "bold 50px 宋体";
+	var img = document.getElementById("image");
+	console.log(img);
+	cxt.drawImage(img,0,0);
+	cxt.font = "bold 50px 楷体";
 	cxt.lineWidth = "2";
-	cxt.strokeStyle = "grey";
+	cxt.strokeStyle = "gray";
+	cxt.shadowColor = "gray";
+	cxt.shadowOffsetX = 5;
+	cxt.shadowOffsetY = 5;
+	cxt.shadowBlur = 2;
 	cxt.textAlign = "right";
 	cxt.textBaseline = "bottom";
 	cxt.strokeText("——Wkit作品",780,580);

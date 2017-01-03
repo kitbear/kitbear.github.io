@@ -127,6 +127,7 @@ chess.onclick = function(e){
 				if(myWin[k] == 5){
 					alert("你赢了");
 					over = true;
+					window.location.reload();
 				}
 			}
 		}
@@ -224,6 +225,7 @@ var computerAI = function(){
 			if(computerWin[k] == 5){
 				alert("计算机赢了");
 				over = true;
+				window.location.reload();
 			}
 		}
 	}
