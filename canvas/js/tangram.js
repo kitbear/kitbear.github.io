@@ -16,8 +16,7 @@ debugger
 for (var i = 0; i < tangram.length; i++) {
 	var path = tangram[i];
 	context.beginPath();
-	context.moveTo(path.p[0].x,path.p[0].y);
-	for (var j = 1; j < path.p.length; j++) {
+	for (var j = 0; j < path.p.length; j++) {
 		context.lineTo(path.p[j].x,path.p[j].y);
 	}
 	context.closePath();
